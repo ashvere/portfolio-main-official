@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jasmine_sc Portfolio</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/scrollstack.css">
+    <link rel="stylesheet" href="css/circulargallery.css">
+    <link rel="stylesheet" href="css/logoloop.css">
+    <link rel="stylesheet" href="css/infinitespiral.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -29,7 +33,7 @@
                 <a href="#about" class="nav-link">About Me</a>
                 <a href="#education" class="nav-link">Education</a>
                 <a href="#projects" class="nav-link">Projects</a>
-                <a href="#experi" class="nav-link">Work Experience</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </nav>
             <a href="#contact" class="btn btn-inquire" data-magnetic>Inquire</a>
@@ -49,11 +53,11 @@
                                 Get to know me!
                             </div>
                             <h1 class="hero-title">
-                                <span class="hero-title-line">Building <span class="accent">Intelligent</span></span>
-                                <span class="hero-title-line">Systems &amp; <span class="accent">Digital</span> Experiences</span>
+                                <span class="hero-title-line">From Trained <span class="accent">Models</span></span>
+                                <span class="hero-title-line">to Shipped <span class="accent">Products</span></span>
                             </h1>
                             <hr class="hero-divider" />
-                            <p class="hero-sub" id="typewriter">I design and build scalable software solutions that solve real problems and create meaningful impacts.</p>
+                            <p class="hero-sub" id="typewriter">Machine learning and software engineer — I take ideas from notebook to production: computer vision, full-stack web, and mobile, built and deployed end to end.</p>
                             <div class="hero-actions">
                                 <a href="#projects" class="btn hero-btn-primary" data-magnetic>View My Work</a>
                                 <a href="#contact" class="btn-ghost hero-btn-ghost" data-magnetic>Let's Talk</a>
@@ -80,57 +84,9 @@
                         </div>
                     </div>
 
-                    <div class="bento hero-skill-card reveal" data-stagger="2" data-tilt>
-                        <div class="skill-header">
-                            <span class="skill-icon">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="1.5">
-                                    <path d="M12 2v20M2 12h20" />
-                                </svg>
-                            </span>
-                            <h3>Web Design & Dev</h3>
-                        </div>
-                        <p class="skill-desc">Full-stack web applications, interactive GIS mapping dashboards, and real-time data integration.</p>
-                        <div class="tech-stack-row">
-                            <span class="tech-pill">React</span>
-                            <span class="tech-pill">TypeScript</span>
-                            <span class="tech-pill">Vite</span>
-                            <span class="tech-pill">Supabase</span>
-                        </div>
-                    </div>
-                    <div class="bento hero-skill-card reveal" data-stagger="3" data-tilt>
-                        <div class="skill-header">
-                            <span class="skill-icon">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="1.5">
-                                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
-                                    <line x1="12" y1="18" x2="12.01" y2="18" />
-                                </svg>
-                            </span>
-                            <h3>Mobile Apps</h3>
-                        </div>
-                        <p class="skill-desc">Cross-platform mobile development for real-time monitoring and early warning systems.</p>
-                        <div class="tech-stack-row">
-                            <span class="tech-pill">Flutter</span>
-                            <span class="tech-pill">Dart</span>
-                            <span class="tech-pill">REST APIs</span>
-                        </div>
-                    </div>
-                    <div class="bento hero-skill-card reveal" data-stagger="4" data-tilt>
-                        <div class="skill-header">
-                            <span class="skill-icon">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="1.5">
-                                    <path d="M12 2v20M2 12h20M7 7l10 10M17 7l-10 10" />
-                                </svg>
-                            </span>
-                            <h3>Machine Learning</h3>
-                        </div>
-                        <p class="skill-desc">Computer vision models for field classification, edge AI deployment, and local LLM workflows.</p>
-                        <div class="tech-stack-row">
-                            <span class="tech-pill">Computer Vision</span>
-                            <span class="tech-pill">MobileNetV2 / ResNet</span>
-                            <span class="tech-pill">Ollama / Gemma</span>
+                    <div class="hero-gallery-card reveal" data-stagger="2">
+                        <div class="circular-gallery" id="heroGallery" tabindex="0" role="region"
+                            aria-label="Photo gallery of Jasmine at seminars and programming events. Use left and right arrow keys to navigate.">
                         </div>
                     </div>
                 </div>
@@ -146,7 +102,7 @@
             <div class="container">
                 <div class="about-wrapper">
                     <div class="about-header reveal" data-stagger="0">
-                        <span class="section-number">01</span>
+                        <span class="section-number">The Person</span>
                         <h2 class="section-title">About Me</h2>
                     </div>
                     <div class="about-content">
@@ -157,74 +113,114 @@
                                 <a href="#contact" class="btn" data-magnetic>Start a Project</a>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="about-highlights reveal" data-stagger="2">
-                            <div class="highlight-item">
-                                <span class="highlight-number">5+</span>
-                                <span class="highlight-label">Years of<br>Development</span>
+                    <div class="skill-orbit reveal" data-stagger="2">
+                        <p class="skill-orbit-hint">Click a node to see how it's actually used</p>
+
+                        <div class="orbit-wrap" id="orbitWrap">
+                            <svg class="orbit-lines" id="orbitLines" aria-hidden="true">
+                                <defs>
+                                    <linearGradient id="orbitLineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" class="orbit-grad-start"></stop>
+                                        <stop offset="100%" class="orbit-grad-end"></stop>
+                                    </linearGradient>
+                                </defs>
+                                <ellipse class="orbit-track" id="orbitTrack" fill="none"></ellipse>
+                            </svg>
+
+                            <div class="orbit" id="orbit"></div>
+
+                            <div class="orbit-core" aria-hidden="true"><span class="orbit-core-dot"></span></div>
+                        </div>
+
+                        <div class="orbit-detail" id="orbitDetail" aria-live="polite">
+                            <div class="orbit-detail-primary">
+                                <div class="orbit-detail-index" id="orbitDetailIndex">01 / 08</div>
+                                <h3 class="orbit-detail-title" id="orbitDetailTitle"></h3>
+                                <div class="orbit-detail-proficiency">
+                                    <span class="orbit-detail-prof-label" id="orbitDetailProfLabel"></span>
+                                    <div class="orbit-detail-meter"><div class="orbit-detail-meter-fill" id="orbitDetailMeterFill"></div></div>
+                                </div>
                             </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">20+</span>
-                                <span class="highlight-label">Projects<br>Delivered</span>
+                            <div class="orbit-detail-secondary">
+                                <div class="orbit-detail-tech tech-stack-row" id="orbitDetailTech"></div>
+                                <p class="orbit-detail-desc" id="orbitDetailDesc"></p>
                             </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">3</span>
-                                <span class="highlight-label">Major<br>Specializations</span>
-                            </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">∞</span>
-                                <span class="highlight-label">Passion for<br>Excellence</span>
-                            </div>
+                        </div>
+
+                        <div class="orbit-controls">
+                            <button type="button" class="orbit-ctrl-btn" id="orbitPrevBtn" aria-label="Previous skill">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                            </button>
+                            <button type="button" class="orbit-ctrl-btn" id="orbitNextBtn" aria-label="Next skill">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ========== SERVICES ========== -->
-        <section class="section-services" id="services">
+        <!-- ========== EDUCATION ========== -->
+        <section class="section-services" id="education">
             <div class="container">
                 <div class="section-header reveal">
-                    <span class="section-number">02</span>
-                    <h2 class="section-title">What I Do</h2>
+                    <span class="section-number">Academic Path</span>
+                    <h2 class="section-title">Education</h2>
                 </div>
-                <div class="services-grid">
-                    <div class="bento service-card reveal" data-stagger="0">
-                        <div class="service-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="1.5">
-                                <path d="M12 2v20M2 12h20M7 7l10 10M17 7l-10 10" />
-                            </svg>
-                        </div>
-                        <h3>Agentic Development & Machine Learning</h3>
-                        <p>Designing and deploying autonomous AI agents, intelligent chat interfaces, and state-driven
-                            deep learning models for specialized local workflows.</p>
+                <div class="education-grid-wrap">
+                    <div class="education-track-line reveal" data-stagger="4" aria-hidden="true">
+                        <span class="education-track-line-fill"></span>
                     </div>
-                    <div class="bento service-card reveal" data-stagger="1">
-                        <div class="service-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="1.5">
-                                <path
-                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-                                <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-                                <line x1="12" y1="22.08" x2="12" y2="12" />
-                            </svg>
+                    <div class="services-grid education-grid">
+                        <div class="bento service-card education-card reveal" data-stagger="0">
+                            <div class="service-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                                </svg>
+                            </div>
+                            <h3>Elementary</h3>
+                            <p class="timeline-institution">Cansilayan Elementary School</p>
+                            <span class="timeline-date">2013 — 2017</span>
                         </div>
-                        <h3>Web Design & Development</h3>
-                        <p>Creating high-quality, professional-level websites focused on responsive design, modern UI/UX
-                            aesthetics, and seamless user experiences.</p>
-                    </div>
-                    <div class="bento service-card reveal" data-stagger="2">
-                        <div class="service-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="1.5">
-                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
-                                <line x1="12" y1="18" x2="12.01" y2="18" />
-                            </svg>
+                        <div class="bento service-card education-card reveal" data-stagger="1">
+                            <div class="service-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z" />
+                                </svg>
+                            </div>
+                            <h3>Junior High School</h3>
+                            <p class="timeline-institution">Integrated Academy School System Inc.</p>
+                            <span class="timeline-date">2017 — 2021</span>
                         </div>
-                        <h3>Mobile Apps</h3>
-                        <p>Delivering premium, professional-level application development for both iOS and Android
-                            platforms using efficient, cross-platform frameworks.</p>
+                        <div class="bento service-card education-card reveal" data-stagger="2">
+                            <div class="service-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" />
+                                    <line x1="8" y1="21" x2="16" y2="21" />
+                                    <line x1="12" y1="17" x2="12" y2="21" />
+                                </svg>
+                            </div>
+                            <h3>Senior High School</h3>
+                            <p class="education-track">Computer System Servicing</p>
+                            <p class="timeline-institution">Pototan National Comprehensive High School</p>
+                            <span class="timeline-date">2021 — 2023</span>
+                        </div>
+                        <div class="bento service-card education-card education-card--current reveal" data-stagger="3">
+                            <div class="service-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M22 10 12 5 2 10l10 5 10-5Z" />
+                                    <path d="M6 12v5c0 1 3 3 6 3s6-2 6-3v-5" />
+                                </svg>
+                            </div>
+                            <span class="education-current-badge"><span class="education-current-dot"></span>In progress</span>
+                            <h3>College</h3>
+                            <p class="education-track">BS in Information Technology</p>
+                            <p class="timeline-institution">West Visayas State University — Pototan Campus</p>
+                            <span class="timeline-date">2023 — 2027</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -234,124 +230,303 @@
         <section class="section-projects" id="projects">
             <div class="container">
                 <div class="section-header reveal">
-                    <span class="section-number">03</span>
+                    <span class="section-number">Selected Work</span>
                     <h2 class="section-title">Featured Work</h2>
                 </div>
-                <div class="bento-grid projects-grid">
-                    <div class="bento project-card project-card--wide reveal" data-stagger="0" data-tilt>
-                        <div class="project-visual" style="background: linear-gradient(135deg, #3d4f41, #4A5D4E);">
-                            <div class="mockup-analytical-cards">
-                                <div class="analytical-card">
-                                    <div class="card-header">
-                                        <span class="card-title">Leaf Diagnostics</span>
-                                        <span class="status-pill status-healthy">Active</span>
-                                    </div>
-                                    <div class="metric-value">98.4% Accuracy</div>
-                                    <div class="sparkline-container">
-                                        <div class="sparkline-bar" style="height: 30%"></div>
-                                        <div class="sparkline-bar" style="height: 50%"></div>
-                                        <div class="sparkline-bar" style="height: 45%"></div>
-                                        <div class="sparkline-bar" style="height: 70%"></div>
-                                        <div class="sparkline-bar" style="height: 85%"></div>
-                                        <div class="sparkline-bar" style="height: 95%"></div>
-                                    </div>
+                <div class="scrollstack-wrap reveal" data-stagger="0">
+                    <div class="scroll-stack-scroller" id="scrollStack">
+                        <div class="scroll-stack-inner">
+                            <div class="scroll-stack-card">
+                                <div class="card-accent" style="background: linear-gradient(135deg, #3d4f41, #4A5D4E);">
+                                    <span class="card-accent-number">01</span>
                                 </div>
-                                <div class="analytical-card mini">
-                                    <span class="card-title">Edge FPS</span>
-                                    <span class="metric-value">42 fps</span>
+                                <div class="project-body">
+                                    <h3>CapRice AI</h3>
+                                    <p>Flutter + TensorFlow/Keras mobile app for offline rice crop disease detection —
+                                        MobileNetV2/EfficientNetV2 models tuned for 90%+ field accuracy, built
+                                        offline-first on Hive local storage.</p>
+                                    <div class="project-tags">
+                                        <span>Flutter</span>
+                                        <span>TensorFlow / Keras</span>
+                                        <span>Offline-First</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="project-body">
-                            <h3>CapRice AI</h3>
-                            <p>An offline-capable mobile application designed for agricultural health monitoring and
-                                edge-device computer vision disease detection. Includes an embedded UI mockup showing
-                                live analytical cards.</p>
-                        </div>
-                    </div>
-                    <div class="bento project-card reveal" data-stagger="1" data-tilt>
-                        <div class="project-visual" style="background: linear-gradient(135deg, #7A8278, #8F9E8B);">
-                            <div class="mockup-dashboard">
-                                <div class="dashboard-chart">
-                                    <div class="chart-y-axis">
-                                        <span>100%</span>
-                                        <span>50%</span>
-                                        <span>0%</span>
-                                    </div>
-                                    <div class="chart-bars">
-                                        <div class="chart-bar" style="height: 80%"></div>
-                                        <div class="chart-bar" style="height: 55%"></div>
-                                        <div class="chart-bar" style="height: 90%"></div>
-                                        <div class="chart-bar" style="height: 35%"></div>
-                                        <div class="chart-bar" style="height: 70%"></div>
+
+                            <div class="scroll-stack-card">
+                                <div class="card-accent" style="background: linear-gradient(135deg, #7A8278, #8F9E8B);">
+                                    <span class="card-accent-number">02</span>
+                                </div>
+                                <div class="project-body">
+                                    <h3>Farmstat</h3>
+                                    <p>Farm management system with an administrative dashboard for real-time crop
+                                        yield statistics and analytics visualization.</p>
+                                    <div class="project-tags">
+                                        <span>Dashboard</span>
+                                        <span>Analytics</span>
                                     </div>
                                 </div>
-                                <div class="dashboard-legend">
-                                    <span class="legend-dot"></span> Yield Forecast
+                            </div>
+
+                            <div class="scroll-stack-card">
+                                <div class="card-accent" style="background: linear-gradient(135deg, #828c7f, #A8B5A4);">
+                                    <span class="card-accent-number">03</span>
+                                </div>
+                                <div class="project-body">
+                                    <h3>Triad Core — Secure Student Portal</h3>
+                                    <p>React, Node.js, and MySQL web portal with role-based access control and data
+                                        encryption, backed by a centralized admin dashboard for logs and diagnostics.</p>
+                                    <div class="project-tags">
+                                        <span>React</span>
+                                        <span>Node.js</span>
+                                        <span>MySQL</span>
+                                        <span>RBAC</span>
+                                    </div>
+                                    <a href="https://triadcore-securestudentportal.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link">View portal ↗</a>
+                                    <a href="https://mina-dashboard.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link">View dashboard ↗</a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="project-body">
-                            <h3>Farmstat</h3>
-                            <p>A functional farm management system featuring a comprehensive administrative dashboard
-                                for real-time statistical crop data and yield analytics visualization.</p>
-                        </div>
-                    </div>
-                    <div class="bento project-card project-card--full reveal" data-stagger="2" data-tilt>
-                        <div class="project-visual" style="background: linear-gradient(135deg, #828c7f, #A8B5A4);">
-                            <div class="mockup-secure-pipeline">
-                                <div class="pipeline-node node-src">
-                                    <span>Client</span>
+
+                            <div class="scroll-stack-card">
+                                <div class="card-accent" style="background: linear-gradient(135deg, #2c2c2c, #4A5D4E);">
+                                    <span class="card-accent-number">04</span>
                                 </div>
-                                <div class="pipeline-connector">
-                                    <div class="pipeline-pulse"></div>
-                                </div>
-                                <div class="pipeline-node node-dest">
-                                    <span>Gateway</span>
-                                </div>
-                                <div class="pipeline-shield">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2">
-                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                                    </svg>
+                                <div class="project-body">
+                                    <h3>NOTDFT — Era of Creation</h3>
+                                    <p>Solo end-to-end Figma UI/UX design for an e-commerce experience — homepage,
+                                        browsing, and checkout — as a live click-through prototype.</p>
+                                    <div class="project-tags">
+                                        <span>Figma</span>
+                                        <span>UI/UX Design</span>
+                                        <span>E-commerce</span>
+                                    </div>
+                                    <a href="https://www.figma.com/proto/KvM3F5MX4uJEhMUogY776s/E-commerce-Website-Design-for-NOTDFT-Era-of-Creation?node-id=0-1&amp;p=f&amp;t=jsDfvRFDngxJemlF-0&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=0%3A1&amp;starting-point-node-id=1%3A3224&amp;fuid=1415111624180078035"
+                                        target="_blank" rel="noopener noreferrer" class="project-link">Open in Figma ↗</a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="project-body">
-                            <h3>Triad Core Secure Portal</h3>
-                            <p>A high-performance, secure system utilizing protected data pipelines, modern
-                                authentication workflows, and robust state architecture.</p>
+
+                            <div class="scroll-stack-card">
+                                <div class="card-accent" style="background: linear-gradient(135deg, #4d6b85, #7fa0b8);">
+                                    <span class="card-accent-number">05</span>
+                                </div>
+                                <div class="project-body">
+                                    <h3>AgriWeather</h3>
+                                    <p>Cross-platform Flutter app delivering real-time, localized weather and
+                                        agricultural forecasts, with push alerts for crop and climate risk management.</p>
+                                    <div class="project-tags">
+                                        <span>Flutter</span>
+                                        <span>REST APIs</span>
+                                        <span>Push Notifications</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="scroll-stack-card">
+                                <div class="card-accent" style="background: linear-gradient(135deg, #3d4f41, #6b7a68);">
+                                    <span class="card-accent-number">06</span>
+                                </div>
+                                <div class="project-body">
+                                    <h3>Real-Time Financial Dashboard</h3>
+                                    <p>Next.js, TypeScript, and GCP dashboard tracking real-time revenue and expenses
+                                        for a government office, server-rendered for fast loads.</p>
+                                    <div class="project-tags">
+                                        <span>Next.js</span>
+                                        <span>TypeScript</span>
+                                        <span>GCP</span>
+                                    </div>
+                                    <a href="https://jasmineanalyticsdashboard.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link">View live ↗</a>
+                                </div>
+                            </div>
+
+                            <div class="scroll-stack-card">
+                                <div class="card-accent" style="background: linear-gradient(135deg, #3d4f41, #8F9E8B);">
+                                    <span class="card-accent-number">07</span>
+                                </div>
+                                <div class="project-body">
+                                    <h3>Mini-Games / PWA Arcade</h3>
+                                    <p>11 lightweight, installable Progressive Web App games (JS/TypeScript) with
+                                        offline caching and service workers, tuned for high Lighthouse scores.</p>
+                                    <div class="project-tags">
+                                        <span>PWA</span>
+                                        <span>JavaScript / TypeScript</span>
+                                        <span>Offline-First</span>
+                                    </div>
+                                    <a href="https://flappyberdv2.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link">Play the arcade ↗</a>
+                                </div>
+                            </div>
+
+                            <div class="scroll-stack-card">
+                                <div class="card-accent" style="background: linear-gradient(135deg, #4A5D4E, #828c7f);">
+                                    <span class="card-accent-number">08</span>
+                                </div>
+                                <div class="project-body">
+                                    <h3>Trafalgar AI</h3>
+                                    <p>Full-stack admin dashboard with an integrated AI chatbot, built end-to-end in
+                                        HTML, CSS, and vanilla JavaScript.</p>
+                                    <div class="project-tags">
+                                        <span>HTML/CSS/JS</span>
+                                        <span>AI Chatbot</span>
+                                        <span>Dashboard</span>
+                                    </div>
+                                    <a href="https://trafalgarai.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link">View live ↗</a>
+                                </div>
+                            </div>
+
+                            <div class="scroll-stack-card">
+                                <div class="card-accent" style="background: linear-gradient(135deg, #4A5D4E, #A8B5A4);">
+                                    <span class="card-accent-number">09</span>
+                                </div>
+                                <div class="project-body">
+                                    <h3>Unlockey</h3>
+                                    <p>Full-stack encryption/decryption tool for securely locking and unlocking
+                                        messages, focused on reliable cryptographic workflows.</p>
+                                    <div class="project-tags">
+                                        <span>Full-Stack</span>
+                                        <span>Encryption</span>
+                                        <span>Security</span>
+                                    </div>
+                                    <a href="https://unlockey.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link">View live ↗</a>
+                                </div>
+                            </div>
+
+                            <div class="scroll-stack-end"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ========== PROCESS ========== -->
-        <section class="section-process" id="process">
+        <!-- ========== CERTIFICATIONS & EVENTS ========== -->
+        <section class="section-process" id="certifications">
             <div class="container">
                 <div class="section-header reveal">
-                    <span class="section-number">04</span>
-                    <h2 class="section-title">How I Work</h2>
+                    <span class="section-number">Beyond the Code</span>
+                    <h2 class="section-title">Certifications &amp; Events</h2>
                 </div>
-                <div class="process-grid">
-                    <div class="bento process-step reveal" data-stagger="0">
-                        <span class="process-number">01</span>
-                        <h3>Blueprint & Architecture</h3>
-                        <p>Defining data structures, agent workflows, and mapping out high-fidelity minimalist
-                            wireframes.</p>
+                <div class="cert-events-layout">
+                    <div class="process-grid cert-events-grid">
+                        <div class="bento process-step reveal" data-stagger="0">
+                            <span class="process-number">01</span>
+                            <h3>WordCamp Iloilo 2026</h3>
+                            <p>Attended WordCamp Iloilo, learning from and connecting with guest speakers across the
+                                WordPress community — now an official contributor to WordPress.</p>
+                            <a class="cert-link"
+                                href="assets/img/certificates/wordpress/WordCamp%20Philippines%20%E2%80%93%20Certificate%20of%20Attendance.pdf"
+                                target="_blank" rel="noopener">View Certificate ↗</a>
+                        </div>
+                        <div class="bento process-step reveal" data-stagger="1">
+                            <span class="process-number">02</span>
+                            <h3>DICT Training — Passi City</h3>
+                            <p>Completed "Digital Productivity Essentials and Applied AI for Automation and Decision
+                                Support" under DICT, and placed 2nd in the program's Shark Tank-style pitching
+                                competition.</p>
+                            <a class="cert-link" href="assets/img/certificates/dict/DWIA-4%28signed%29.pdf"
+                                target="_blank" rel="noopener">View Certificate ↗</a>
+                        </div>
+                        <div class="bento process-step reveal" data-stagger="2">
+                            <span class="process-number">03</span>
+                            <h3>GCI Program — Tokyo, Japan</h3>
+                            <p>Took part in the GCI Program at the Matsuo–Iwasawa Laboratory, University of Tokyo,
+                                Japan.</p>
+                            <a class="cert-link" href="assets/img/certificates/GCI%20Japan/Certificate_page-0001.jpg"
+                                target="_blank" rel="noopener">View Certificate ↗</a>
+                        </div>
                     </div>
-                    <div class="bento process-step reveal" data-stagger="1">
-                        <span class="process-number">02</span>
-                        <h3>Unified Development</h3>
-                        <p>Writing clean, modular code to build unified mobile and web codebases with autonomous agent
-                            integrations.</p>
+
+                    <div class="event-spiral-shell reveal" data-stagger="3">
+                        <div id="eventSpiral"></div>
+                        <span class="event-spiral-hint">Drag or scroll to explore</span>
                     </div>
-                    <div class="bento process-step reveal" data-stagger="2">
-                        <span class="process-number">03</span>
-                        <h3>Optimizing Performance</h3>
-                        <p>Rigorous testing for system load speeds, LLM prompt engineering, edge-case debugging, and
-                            database sync.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CERTIFICATION GALLERY ========== -->
+        <section class="section-cert-gallery" id="certifications-gallery">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">All Certifications</h2>
+                </div>
+
+                <div class="cert-modal-triggers reveal" data-stagger="0">
+                    <button type="button" class="cert-modal-trigger" data-modal-target="modal-cisco">
+                        <span class="cert-modal-trigger-label">Cisco Networking Academy</span>
+                        <span class="cert-modal-trigger-count">9</span>
+                    </button>
+                    <button type="button" class="cert-modal-trigger" data-modal-target="modal-sololearn">
+                        <span class="cert-modal-trigger-label">Sololearn</span>
+                        <span class="cert-modal-trigger-count">19</span>
+                    </button>
+                    <button type="button" class="cert-modal-trigger" data-modal-target="modal-uniathena">
+                        <span class="cert-modal-trigger-label">UniAthena</span>
+                        <span class="cert-modal-trigger-count">4</span>
+                    </button>
+                    <button type="button" class="cert-modal-trigger" data-modal-target="modal-asean">
+                        <span class="cert-modal-trigger-label">ASEAN Foundation</span>
+                        <span class="cert-modal-trigger-count">1</span>
+                    </button>
+                </div>
+
+                <div class="cert-modal-overlay" id="certModalOverlay" hidden>
+                    <div class="cert-modal" id="modal-cisco" role="dialog" aria-modal="true" aria-labelledby="modal-cisco-title" hidden>
+                        <button type="button" class="cert-modal-close" aria-label="Close">&times;</button>
+                        <h3 class="cert-modal-title" id="modal-cisco-title">Cisco Networking Academy</h3>
+                        <div class="cert-grid">
+                            <a class="cert-card cert-card--doc" href="assets/img/certificates/cisco/C--_Essentials_1_certificate_jasminesalvadorcalvo-gmail-com_d11c3910-2f6c-4713-a1c7-211f6cf036f8.pdf" target="_blank" rel="noopener"><span class="cert-card-icon" aria-hidden="true">PDF</span><span class="cert-card-title">C++ Essentials 1</span></a>
+                            <a class="cert-card cert-card--doc" href="assets/img/certificates/cisco/CSS_Essentials_certificate_jasminesalvadorcalvo-gmail-com_5e653353-d583-403f-9d45-6f324d8483ed.pdf" target="_blank" rel="noopener"><span class="cert-card-icon" aria-hidden="true">PDF</span><span class="cert-card-title">CSS Essentials</span></a>
+                            <a class="cert-card cert-card--doc" href="assets/img/certificates/cisco/HTML_Essentials_certificate_jasminesalvadorcalvo-gmail-com_42023199-13e2-43dc-9890-15c2c0cf9e60.pdf" target="_blank" rel="noopener"><span class="cert-card-icon" aria-hidden="true">PDF</span><span class="cert-card-title">HTML Essentials</span></a>
+                            <a class="cert-card cert-card--doc" href="assets/img/certificates/cisco/Introduction_to_Data_Science_certificate_jasminesalvadorcalvo-gmail-com_7eaeb575-7d5a-450f-aa56-22d7f2eb2251.pdf" target="_blank" rel="noopener"><span class="cert-card-icon" aria-hidden="true">PDF</span><span class="cert-card-title">Introduction to Data Science</span></a>
+                            <a class="cert-card cert-card--doc" href="assets/img/certificates/cisco/Introduction_to_Modern_AI_certificate_jasminesalvadorcalvo-gmail-com_7a17e41d-b7d3-4f1a-9723-897ddd2690bb.pdf" target="_blank" rel="noopener"><span class="cert-card-icon" aria-hidden="true">PDF</span><span class="cert-card-title">Introduction to Modern AI</span></a>
+                            <a class="cert-card cert-card--doc" href="assets/img/certificates/cisco/JavaScript_Essentials_1_certificate_jasminesalvadorcalvo-gmail-com_28d88523-05d2-4701-bbf0-809d98b91cf0.pdf" target="_blank" rel="noopener"><span class="cert-card-icon" aria-hidden="true">PDF</span><span class="cert-card-title">JavaScript Essentials 1</span></a>
+                            <a class="cert-card cert-card--doc" href="assets/img/certificates/cisco/Linux_Unhatched_certificate_jasminesalvadorcalvo-gmail-com_244b444e-712e-44e0-ab16-99896522ad19.pdf" target="_blank" rel="noopener"><span class="cert-card-icon" aria-hidden="true">PDF</span><span class="cert-card-title">Linux Unhatched</span></a>
+                            <a class="cert-card cert-card--doc" href="assets/img/certificates/cisco/OperatingSystemsBasicsUpdate20260902-20-fwwh1j.pdf" target="_blank" rel="noopener"><span class="cert-card-icon" aria-hidden="true">PDF</span><span class="cert-card-title">Operating Systems Basics</span></a>
+                            <a class="cert-card cert-card--doc" href="assets/img/certificates/cisco/Python_Essentials_1_certificate_jasminesalvadorcalvo-gmail-com_45ad73b4-4d27-4a50-81e5-0829cb886af9.pdf" target="_blank" rel="noopener"><span class="cert-card-icon" aria-hidden="true">PDF</span><span class="cert-card-title">Python Essentials 1</span></a>
+                        </div>
+                    </div>
+
+                    <div class="cert-modal" id="modal-sololearn" role="dialog" aria-modal="true" aria-labelledby="modal-sololearn-title" hidden>
+                        <button type="button" class="cert-modal-close" aria-label="Close">&times;</button>
+                        <h3 class="cert-modal-title" id="modal-sololearn-title">Sololearn</h3>
+                        <div class="cert-grid">
+                            <a class="cert-card" href="assets/img/certificates/sololearn/angular.png" target="_blank" rel="noopener"><img class="cert-card-img" src="assets/img/certificates/sololearn/angular.png" alt="Angular certificate" loading="lazy"><span class="cert-card-title">Angular</span></a>
+                            <a class="cert-card" href="assets/img/certificates/sololearn/c%20intermediate.png" target="_blank" rel="noopener"><img class="cert-card-img" src="assets/img/certificates/sololearn/c%20intermediate.png" alt="C Intermediate certificate" loading="lazy"><span class="cert-card-title">C Intermediate</span></a>
+                            <a class="cert-card" href="assets/img/certificates/sololearn/coding%20for%20data.png" target="_blank" rel="noopener"><img class="cert-card-img" src="assets/img/certificates/sololearn/coding%20for%20data.png" alt="Coding for Data certificate" loading="lazy"><span class="cert-card-title">Coding for Data</span></a>
+                            <a class="cert-card" href="assets/img/certificates/sololearn/coding%20foundations.png" target="_blank" rel="noopener"><img class="cert-card-img" src="assets/img/certificates/sololearn/coding%20foundations.png" alt="Coding Foundations certificate" loading="lazy"><span class="cert-card-title">Coding Foundations</span></a>
+                            <a class="cert-card" href="assets/img/certificates/sololearn/introduction%20to%20c%23.png" target="_blank" rel="noopener"><img class="cert-card-img" src="assets/img/certificates/sololearn/introduction%20to%20c%23.png" alt="Introduction to C# certificate" loading="lazy"><span class="cert-card-title">Introduction to C#</span></a>
+                            <a class="cert-card" href="assets/img/certificates/sololearn/introduction%20to%20c%2B%2B.png" target="_blank" rel="noopener"><img class="cert-card-img" src="assets/img/certificates/sololearn/introduction%20to%20c%2B%2B.png" alt="Introduction to C++ certificate" loading="lazy"><span class="cert-card-title">Introduction to C++</span></a>
+                            <a class="cert-card" href="assets/img/certificates/sololearn/introduction%20to%20c.png" target="_blank" rel="noopener"><img class="cert-card-img" src="assets/img/certificates/sololearn/introduction%20to%20c.png" alt="Introduction to C certificate" loading="lazy"><span class="cert-card-title">Introduction to C</span></a>
+                            <a class="cert-card" href="assets/img/certificates/sololearn/introduction%20to%20css.png" target="_blank" rel="noopener"><img class="cert-card-img" src="assets/img/certificates/sololearn/introduction%20to%20css.png" alt="Introduction to CSS certificate" loading="lazy"><span class="cert-card-title">Introduction to CSS</span></a>
+                            <a class="cert-card" href="assets/img/certificates/sololearn/introduction%20to%20html.png" target="_blank" rel="noopener"><img class="cert-card-img" src="assets/img/certificates/sololearn/introduction%20to%20html.png" alt="Introduction to HTML certificate" loading="lazy"><span class="cert-card-title">Introduction to HTML</span></a>
+                            <a class="cert-card" href="assets/img/certificates/sololearn/introduction%20to%20java.png" target="_blank" rel="noopener"><img class="cert-card-img" src="assets/img/certificates/sololearn/introduction%20to%20java.png" alt="Introduction to Java certificate" loading="lazy"><span class="cert-card-title">Introduction to Java</span></a>
+                            <a class="cert-card" href="assets/img/certificates/sololearn/introduction%20to%20js.png" target="_blank" rel="noopener"><img class="cert-card-img" src="assets/img/certificates/sololearn/introduction%20to%20js.png" alt="Introduction to JS certificate" loading="lazy"><span class="cert-card-title">Introduction to JS</span></a>
+                            <a class="cert-card" href="assets/img/certificates/sololearn/introduction%20to%20python.png" target="_blank" rel="noopener"><img class="cert-card-img" src="assets/img/certificates/sololearn/introduction%20to%20python.png" alt="Introduction to Python certificate" loading="lazy"><span class="cert-card-title">Introduction to Python</span></a>
+                            <a class="cert-card" href="assets/img/certificates/sololearn/introduction%20to%20sql.png" target="_blank" rel="noopener"><img class="cert-card-img" src="assets/img/certificates/sololearn/introduction%20to%20sql.png" alt="Introduction to SQL certificate" loading="lazy"><span class="cert-card-title">Introduction to SQL</span></a>
+                            <a class="cert-card" href="assets/img/certificates/sololearn/java%20intermediate.png" target="_blank" rel="noopener"><img class="cert-card-img" src="assets/img/certificates/sololearn/java%20intermediate.png" alt="Java Intermediate certificate" loading="lazy"><span class="cert-card-title">Java Intermediate</span></a>
+                            <a class="cert-card" href="assets/img/certificates/sololearn/javascript%20intermediate.png" target="_blank" rel="noopener"><img class="cert-card-img" src="assets/img/certificates/sololearn/javascript%20intermediate.png" alt="JavaScript Intermediate certificate" loading="lazy"><span class="cert-card-title">JavaScript Intermediate</span></a>
+                            <a class="cert-card" href="assets/img/certificates/sololearn/python%20developer.png" target="_blank" rel="noopener"><img class="cert-card-img" src="assets/img/certificates/sololearn/python%20developer.png" alt="Python Developer certificate" loading="lazy"><span class="cert-card-title">Python Developer</span></a>
+                            <a class="cert-card" href="assets/img/certificates/sololearn/python%20intermediate.png" target="_blank" rel="noopener"><img class="cert-card-img" src="assets/img/certificates/sololearn/python%20intermediate.png" alt="Python Intermediate certificate" loading="lazy"><span class="cert-card-title">Python Intermediate</span></a>
+                            <a class="cert-card" href="assets/img/certificates/sololearn/sql%20intermediate.png" target="_blank" rel="noopener"><img class="cert-card-img" src="assets/img/certificates/sololearn/sql%20intermediate.png" alt="SQL Intermediate certificate" loading="lazy"><span class="cert-card-title">SQL Intermediate</span></a>
+                            <a class="cert-card" href="assets/img/certificates/sololearn/tech%20for%20everyone.png" target="_blank" rel="noopener"><img class="cert-card-img" src="assets/img/certificates/sololearn/tech%20for%20everyone.png" alt="Tech for Everyone certificate" loading="lazy"><span class="cert-card-title">Tech for Everyone</span></a>
+                        </div>
+                    </div>
+
+                    <div class="cert-modal" id="modal-uniathena" role="dialog" aria-modal="true" aria-labelledby="modal-uniathena-title" hidden>
+                        <button type="button" class="cert-modal-close" aria-label="Close">&times;</button>
+                        <h3 class="cert-modal-title" id="modal-uniathena-title">UniAthena</h3>
+                        <div class="cert-grid">
+                            <a class="cert-card" href="assets/img/certificates/uniathena/Basics%20of%20Data%20Visualization%20Using%20Python%20%28CR966%29.png" target="_blank" rel="noopener"><img class="cert-card-img" src="assets/img/certificates/uniathena/Basics%20of%20Data%20Visualization%20Using%20Python%20%28CR966%29.png" alt="Basics of Data Visualization Using Python (CR966) certificate" loading="lazy"><span class="cert-card-title">Basics of Data Visualization Using Python (CR966)</span></a>
+                            <a class="cert-card" href="assets/img/certificates/uniathena/Basics%20of%20Machine%20Learning%20Algorithms%20%28CR640%29.png" target="_blank" rel="noopener"><img class="cert-card-img" src="assets/img/certificates/uniathena/Basics%20of%20Machine%20Learning%20Algorithms%20%28CR640%29.png" alt="Basics of Machine Learning Algorithms (CR640) certificate" loading="lazy"><span class="cert-card-title">Basics of Machine Learning Algorithms (CR640)</span></a>
+                            <a class="cert-card" href="assets/img/certificates/uniathena/Basics%20of%20Microsoft%20PowerBi.png" target="_blank" rel="noopener"><img class="cert-card-img" src="assets/img/certificates/uniathena/Basics%20of%20Microsoft%20PowerBi.png" alt="Basics of Microsoft PowerBi certificate" loading="lazy"><span class="cert-card-title">Basics of Microsoft PowerBi</span></a>
+                            <a class="cert-card" href="assets/img/certificates/uniathena/Basics%20of%20Python%20%28CR641%29.png" target="_blank" rel="noopener"><img class="cert-card-img" src="assets/img/certificates/uniathena/Basics%20of%20Python%20%28CR641%29.png" alt="Basics of Python (CR641) certificate" loading="lazy"><span class="cert-card-title">Basics of Python (CR641)</span></a>
+                        </div>
+                    </div>
+
+                    <div class="cert-modal" id="modal-asean" role="dialog" aria-modal="true" aria-labelledby="modal-asean-title" hidden>
+                        <button type="button" class="cert-modal-close" aria-label="Close">&times;</button>
+                        <h3 class="cert-modal-title" id="modal-asean-title">ASEAN Foundation</h3>
+                        <div class="cert-grid">
+                            <a class="cert-card" href="assets/img/certificates/asean/certificate_ai-career-readiness.png" target="_blank" rel="noopener"><img class="cert-card-img" src="assets/img/certificates/asean/certificate_ai-career-readiness.png" alt="AI Career Readiness certificate" loading="lazy"><span class="cert-card-title">AI Career Readiness</span></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -361,41 +536,11 @@
         <section class="section-timeline" id="timeline">
             <div class="container">
                 <div class="section-header reveal">
-                    <span class="section-number">05</span>
-                    <h2 class="section-title">Education & Experience</h2>
+                    <span class="section-number">Background</span>
+                    <h2 class="section-title">Experience</h2>
                 </div>
                 <div class="bento-grid timeline-grid">
-                    <div class="bento timeline-card reveal" data-stagger="0">
-                        <h3>Academic Track</h3>
-                        <ul>
-                            <li class="timeline-item">
-                                <div class="timeline-meta">
-                                    <span class="timeline-institution">West Visayas State University - Pototan
-                                        Campus</span>
-                                    <span class="timeline-date">2023 — 2028</span>
-                                </div>
-                                <p class="timeline-desc">Actively building a career in tech through hands-on UI/UX
-                                    design, programming, and real-world project portfolios.</p>
-                            </li>
-                            <li class="timeline-item">
-                                <div class="timeline-meta">
-                                    <span class="timeline-institution">Pototan National Comprehensive High School</span>
-                                    <span class="timeline-date">2021 — 2023</span>
-                                </div>
-                                <p class="timeline-desc">Discovered a passion for programming and problem-solving while
-                                    building a strong academic foundation.</p>
-                            </li>
-                            <li class="timeline-item">
-                                <div class="timeline-meta">
-                                    <span class="timeline-institution">Integrated Academy School System Inc.</span>
-                                    <span class="timeline-date">2017 — 2020</span>
-                                </div>
-                                <p class="timeline-desc">Initial technical discovery phase and fundamental
-                                    problem-solving exploration.</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="bento timeline-card reveal" data-stagger="1">
+                    <div class="bento timeline-card timeline-card--full reveal" data-stagger="0">
                         <h3>Professional Experience</h3>
                         <ul>
                             <li class="timeline-item">
@@ -424,6 +569,19 @@
                             </li>
                         </ul>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== TECH STACK ========== -->
+        <section class="section-logoloop" id="tech-stack">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-number">Toolbox</span>
+                    <h2 class="section-title">Tech Stack</h2>
+                </div>
+                <div class="reveal" data-stagger="0">
+                    <div id="techLogoLoop"></div>
                 </div>
             </div>
         </section>
@@ -459,7 +617,12 @@
         <p class="copyright">&copy; 2026 Mina. All rights reserved.</p>
     </footer>
 
-    <script type="module" src="js/main.js"></script>
+    <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js" defer></script>
+    <script src="js/scrollstack.js" defer></script>
+    <script type="module" src="js/circulargallery.js"></script>
+    <script src="js/logoloop.js" defer></script>
+    <script src="js/infinitespiral.js" defer></script>
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>

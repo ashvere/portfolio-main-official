@@ -1,0 +1,51 @@
+/* ========================================================================
+   CircularGallery (Hero photo reel) — vanilla ES module port of React Bits'
+   CircularGallery, restyled to sit in the hero bento grid.
+   ======================================================================== */
+
+.hero-gallery-card {
+    grid-column: span 12;
+    grid-row: 2;
+    position: relative;
+    height: 380px;
+    border-radius: 24px;
+    overflow: hidden;
+    background: var(--bg);
+    border: 1px solid var(--glass-border-subtle);
+    box-shadow: var(--glass-shadow);
+    transition: background var(--transition-theme), border-color var(--transition-hover);
+}
+
+.circular-gallery {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: grab;
+}
+
+.circular-gallery:active {
+    cursor: grabbing;
+}
+
+.circular-gallery:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: -4px;
+}
+
+.circular-gallery canvas {
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .hero-gallery-card {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        height: 300px;
+    }
+}
+
+@media (max-width: 560px) {
+    .hero-gallery-card {
+        height: 240px;
+    }
+}

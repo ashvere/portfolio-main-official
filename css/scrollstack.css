@@ -1,0 +1,103 @@
+/* ========================================================================
+   ScrollStack (Featured Work deck) — vanilla port of React Bits' ScrollStack,
+   restyled to match this site's design tokens (see styles.css :root).
+   ======================================================================== */
+
+.scrollstack-wrap {
+    position: relative;
+    height: 640px;
+    max-height: 78vh;
+}
+
+.scroll-stack-scroller {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: visible;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: scroll-position;
+    border: 1px solid #E8E3DA;
+    border-radius: var(--radius-lg);
+    background: var(--bg-alt);
+    transition: background var(--transition-theme), border-color var(--transition-hover);
+}
+
+.scroll-stack-inner {
+    padding: 3rem 2rem 16rem;
+    min-height: 100%;
+}
+
+.scroll-stack-card {
+    transform-origin: top center;
+    will-change: transform, filter;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.08);
+    height: 320px;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    border: 1px solid #E8E3DA;
+    background: var(--cream);
+    transition: border-color var(--transition-hover), background var(--transition-theme);
+}
+
+.scroll-stack-card:hover {
+    border-color: var(--moss);
+}
+
+.scroll-stack-card .card-accent {
+    flex-shrink: 0;
+    height: 92px;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 1.75rem 0.75rem;
+}
+
+.scroll-stack-card .card-accent-number {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.scroll-stack-card .project-body {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+}
+
+.scroll-stack-end {
+    width: 100%;
+    height: 1px;
+}
+
+@media (max-width: 900px) {
+    .scrollstack-wrap {
+        height: 560px;
+    }
+
+    .scroll-stack-inner {
+        padding: 2.5rem 1.25rem 13rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .scrollstack-wrap {
+        height: 480px;
+        max-height: 72vh;
+    }
+
+    .scroll-stack-card {
+        height: 360px;
+    }
+}
