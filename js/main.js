@@ -8,6 +8,47 @@
 
     var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    /* ========== CONTACT FORM ========== */
+
+    var contactForm = document.getElementById('contactForm');
+
+    if (contactForm) {
+        var contactStatus = document.getElementById('contactFormStatus');
+        var contactSubmitBtn = contactForm.querySelector('button[type="submit"]');
+
+        contactForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            contactSubmitBtn.disabled = true;
+            contactStatus.textContent = 'Sending...';
+            contactStatus.removeAttribute('data-state');
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify(Object.fromEntries(new FormData(contactForm)))
+            })
+                .then(function (response) { return response.json(); })
+                .then(function (data) {
+                    if (data.success) {
+                        contactStatus.textContent = 'Thanks — your message is on its way!';
+                        contactStatus.setAttribute('data-state', 'success');
+                        contactForm.reset();
+                    } else {
+                        contactStatus.textContent = 'Something went wrong. Please try again.';
+                        contactStatus.setAttribute('data-state', 'error');
+                    }
+                })
+                .catch(function () {
+                    contactStatus.textContent = 'Something went wrong. Please try again.';
+                    contactStatus.setAttribute('data-state', 'error');
+                })
+                .finally(function () {
+                    contactSubmitBtn.disabled = false;
+                });
+        });
+    }
+
     /* ========== HERO — CIRCULAR GALLERY ========== */
 
     var heroGalleryEl = document.getElementById('heroGallery');

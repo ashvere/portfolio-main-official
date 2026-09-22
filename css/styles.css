@@ -2536,6 +2536,30 @@ body.cert-modal-open {
     align-self: flex-start;
 }
 
+.contact-form button[type="submit"]:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.contact-honeypot {
+    display: none;
+}
+
+.contact-form-status {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    min-height: 1.2em;
+    margin: 0;
+}
+
+.contact-form-status[data-state="success"] {
+    color: #10b981;
+}
+
+.contact-form-status[data-state="error"] {
+    color: #e05252;
+}
+
 .social-links {
     display: flex;
     justify-content: flex-start;

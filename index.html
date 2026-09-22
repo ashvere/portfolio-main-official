@@ -595,14 +595,18 @@
                         <span class="contact-status-dot"></span>
                         Status: Open for technical contracts & agentic collaborations.
                     </div>
-                    <form class="contact-form">
-                        <input type="email" placeholder="Your email address" required>
-                        <textarea placeholder="Tell me about your project..." rows="4" required></textarea>
+                    <form class="contact-form" id="contactForm">
+                        <input type="hidden" name="access_key" value="fc9597f9-e859-4d39-9cbb-5100aea143bc">
+                        <input type="hidden" name="subject" value="New message from portfolio contact form">
+                        <input type="checkbox" name="botcheck" class="contact-honeypot" tabindex="-1" autocomplete="off">
+                        <input type="email" name="email" placeholder="Your email address" required>
+                        <textarea name="message" placeholder="Tell me about your project..." rows="4" required></textarea>
                         <button type="submit" class="btn" data-magnetic>Send Message</button>
+                        <p class="contact-form-status" id="contactFormStatus" role="status" aria-live="polite"></p>
                     </form>
                     <div class="social-links">
                         <a href="mailto:mina@agentic.dev" class="contact-link" data-magnetic>mina@agentic.dev</a>
-                        <a href="https://github.com/jasmine-sc" class="contact-link"
+                        <a href="https://github.com/minaaalib" class="contact-link"
                             data-magnetic>github.com/jasmine-sc</a>
                         <a href="https://www.linkedin.com/in/jasmine-salvador-calvo-7b85ba311/"
                             data-magnetic>LinkedIn</a>
